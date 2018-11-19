@@ -50,6 +50,7 @@ class app_class_perscom
 
 		// Load our base language file
 		$this->registry->class_localization->loadLanguageFile( array( 'public_lang' ) );
+        $this->registry->class_localization->loadLanguageFile( array( 'public_errors' ) );
 
 		// If were not in the ACP
 		if ( !IN_ACP ) {
@@ -143,13 +144,78 @@ class app_class_perscom
 		}
 	}
 
+    /**
+     * After output initialization
+     *
+     * @param    object        Registry reference
+     * @return    @e void
+     */
+    public function afterOutputInit( ipsRegistry $registry )
+    {
+        // Check to make sure we are not in the ACP
+        if (!IN_ACP)
+        {
+            // If PERSCOM not disabled
+            if ( !ipsRegistry::$settings[ 'perscom_disable' ] )
+            {
+                // Get license key info
+                $licenseKeyManager = IPSLib::loadLibrary( IPS_KERNEL_PATH . 'classPerscom.php', 'classLicenseManagement' );
+                $manager = new $licenseKeyManager();
+
+                // If not valid
+                if ( !$manager->isValid() )
+                {
+                    // Switch between our errors
+                    switch ( $manager->warning )
+                    {
+                        // No license key
+                        case 1:
+
+                            // Show an error
+                            $registry->output->showError( 'Please enter a license key in your settings to use PERSCOM.', 1, FALSE, NULL, 400 );
+
+                            break;
+
+                        // License key expired
+                        case 2:
+
+                            // Show an error
+                            $registry->output->showError( 'Your license key has expired. Please renew it with Deschutes Design Group LLC to continue using PERSCOM.', 2, FALSE, NULL, 400 );
+
+                            break;
+
+                        // License key inactive
+                        case 3:
+
+                            // Show an error
+                            $registry->output->showError( 'Your license key is inactive. Please renew it with Deschutes Design Group LLC to continue using PERSCOM.', 3, FALSE, NULL, 400 );
+
+                            break;
+                    }
+
+                }
+            }
+
+            // PERSCOM is disabled
+            else
+            {
+                // If the member is not in any authorized groups
+                if ( !IPSMember::isInGroup( ipsRegistry::member()->fetchMemberData(), array_filter(explode(',', ipsRegistry::$settings['perscom_offline_access_groups'])) , true) ) {
+
+                    // Show an error
+                    $registry->output->showError( ipsRegistry::$settings['perscom_offline_message'], 12345678, false, '', 403 );
+                }
+            }
+        }
+    }
+
 	/**
      * After output initialization
      *
      * @param    object        Registry reference
      * @return    @e void
      */
-    public function afterOutputInit( ipsRegistry $registry ) {
+    public function afterOutputInit2( ipsRegistry $registry ) {
 
     	// Check to make sure we are not in the ACP
     	if (!IN_ACP) {

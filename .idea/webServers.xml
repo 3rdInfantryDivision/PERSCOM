@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2570fb58-9226-45f8-8a11-4f31cab2d4db" name="Localhost" url="http://localhost:8888/ipb3/">
+        <fileTransfer port="0" mountedRoot="/Applications/MAMP/htdocs/ipb3" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

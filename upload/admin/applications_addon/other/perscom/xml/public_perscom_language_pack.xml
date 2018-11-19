@@ -1377,5 +1377,53 @@ Please click the link below to visit the Candidate Files.]]></word_default>
       <word_key>teamspeak_desc</word_key>
       <word_default>Join us today at teamspeak.3rdinf.us</word_default>
     </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_inactive</word_key>
+      <word_default>The license key you entered is inactive.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_expired</word_key>
+      <word_default>The license key you entered is expired.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_general</word_key>
+      <word_default>Unable to complete license key request. Please contact Technical Support for more help.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_identifier_key</word_key>
+      <word_default>Either the license key you entered is not valid or the URL of your website does not match the URL registered with the license key you entered.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_cancelled</word_key>
+      <word_default>Your purchase of PERSCOM has been cancelled.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_max</word_key>
+      <word_default>This license key has already reached its max usages. Please contact technical support to request a new license key.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_usage_id</word_key>
+      <word_default>The license key usage id supplied in the request does not match the one on file. Please contact Technical Support for more help.</word_default>
+    </lang>
+    <lang>
+      <word_app>perscom</word_app>
+      <word_pack>public_errors</word_pack>
+      <word_key>perscom_license_error_ip</word_key>
+      <word_default>The IP used to perform the request does not match the IP that was used to activate the license key.</word_default>
+    </lang>
   </languagegroup>
 </languageexport>
