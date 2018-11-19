@@ -80,4 +80,8 @@
         <human>2.0.9</human>
         <long>20009</long>
     </version>
+    <version>
+        <human>2.1.0</human>
+        <long>20010</long>
+    </version>
 </versions>

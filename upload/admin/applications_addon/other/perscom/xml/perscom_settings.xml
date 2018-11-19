@@ -381,6 +381,22 @@
       <conf_is_title>0</conf_is_title>
     </setting>
     <setting>
+      <conf_title>License Key Usage ID</conf_title>
+      <conf_description/>
+      <conf_type>input</conf_type>
+      <conf_key>perscom_usage_id</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>perscom_general_settings</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
       <conf_title>Turn PERSCOM Offline</conf_title>
       <conf_description>Disable access to PERSCOM. The application will still be accessible by groups that are set in the permissions below.</conf_description>
       <conf_type>yes_no</conf_type>
