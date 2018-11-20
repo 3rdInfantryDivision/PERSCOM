@@ -1,6 +1,5 @@
 # NO LONGER MAINTAINED
 
-# PERSCOM
 A realism unit personnel and operational management tool built by the <a href="http://www.3rdinf.us">3rd Infantry Division</a>.
 
 PERSCOM is a versatile soldier management tool built by the 3rd Infantry Division to help realism/milsim based clans manage soldiers, track enlistment and improve operational efficiencies. The system contains many features that help units reduce "clutter" work and helps all members get back to what matters most, the game and its associated community. PERSCOM is constantly evolving and new features are being released regularly.
