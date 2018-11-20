@@ -1,3 +1,5 @@
+# NO LONGER MAINTAINED
+
 # PERSCOM
 A realism unit personnel and operational management tool built by the <a href="http://www.3rdinf.us">3rd Infantry Division</a>.
 
